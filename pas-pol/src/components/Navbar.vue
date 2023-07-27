@@ -1,0 +1,96 @@
+<script setup lang="ts">
+    type Props = {
+        flex_type: string,
+        position: string
+    }
+    const { flex_type } = defineProps<Props>();
+</script>
+
+<template>
+    <nav class="nav" :class="position">
+        <ul class="l-inner__flex" :class="flex_type">
+            <li><NuxtLink to="/">TOP</NuxtLink></li>
+            <li><NuxtLink to="/">PRODUCT</NuxtLink></li>
+            <li><NuxtLink to="/">ABOUT</NuxtLink></li>
+            <li><NuxtLink to="/">NEWS</NuxtLink></li>
+            <li><NuxtLink to="/">CONTACT</NuxtLink></li>
+        </ul>
+    </nav>
+</template>
+
+<style lang="scss" scoped>
+@use "../assets/scss/foundation/color" as c;
+@use "../assets/scss/foundation/rem" as r;
+@use "../assets/scss/foundation/mixin" as m;
+    .nav {
+        width: 50%;
+        margin-top: 75px;
+        margin-right: 7%;
+        @include m.mq(sp) {
+            width: 100%;
+            margin:  0 auto;
+        }
+        ul {
+            gap: 5%;
+            @include m.mq(sp) {
+                flex-direction: column;
+            }
+        }
+        li {
+            font-size: r.f-rem(14);
+            cursor: pointer;
+            @include m.mq(sp) {
+                width: 100%;
+                padding: 1.2em 7% 1em 7%;
+                &:not(:last-child) {
+                    border-bottom: 1px solid c.$white;
+                }
+            }
+            a {
+                color: c.$white;
+            }
+        }
+        &.is__header {
+            @include m.mq(sp) {
+                position: absolute;
+                width: 100%;
+                top: 46px;
+                left: 0;
+                height: 0;
+                background-color: rgba(0, 0, 0, 0.7);
+                visibility: hidden;
+                pointer-events: none;
+                z-index: 10;
+            }
+            li a {
+                border-bottom: 2px solid transparent;
+                padding-bottom: 8px;
+                @media (any-hover: hover) {
+                    &:hover {
+                        border-color: c.$white;
+                    }
+                }
+            }
+            &.is__open {
+                height: auto;
+                visibility: visible;
+                pointer-events: all;
+            }
+        }
+        &.is__footer {
+            margin: 0 auto;
+            li {
+                @include m.mq(sp) {
+                    text-align: left;
+                }
+                a {
+                    @media (any-hover: hover) {
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>

@@ -1,0 +1,19 @@
+@use "../../foundation/mixin" as m;
+
+.pc {
+    @include m.mq(sp) {
+        display: none;
+    }
+}
+.sp {
+    display: none;
+    @include m.mq(sp) {
+        display: block;
+    }
+}
+.spm {
+    display: none;
+    @include m.mq(sp_min) {
+        display: block;
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title><%= meta.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="<%= meta.description %>">
+    <meta name="keywords" content="">
+    <!-- ogp -->
+    <meta property="og:title" content="<%= meta.title %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="<%= path %>images/common/opg-img.jpg" />
+    <meta property="og:description" content="<%= meta.description %>" />
+    <meta name="twitter:card" content="Summary with Large Image" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="ROBOTS" content="NOODP" />
+    <link rel="canonical" href="https://example.com/<%= meta.dir %>">
+    <link rel="dns-prefetch" href="//example.com/">
+    <link rel="preconnect" href="//example.com/">
+    <link rel="prefetch" href="<%= path %>css/style.min.css">
+    <link rel="prefetch" href="<%= path %>js/script.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="<%= path %>css/style.min.css">
+    <!-- favicon -->
+    <link rel="icon" href="<%= path %>images/common/favicon.ico" sizes="any">
+    <link rel="icon" href="<%= path %>images/common/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="<%= path %>images/common/apple-touch-icon.png">
+    <script type="application/id+json">
+        {
+            "@context" : "http://schema.org",
+            "@type" : "Corporation",
+            "name" : "Company Name",
+            "url" : "https://example.com/",
+            "logo" : "https://example.com/images/common/logo.svg",
+            "telephone" : "053-000-0000",
+            "address" : "{
+                "@type" : "PostalAddress",
+                "postalCode" : "000-0000",
+                "addressRegion" : "静岡県",
+                "addressLocality" : "",
+                "streetAddress" : ""
+            }"
+        }
+    </script>
+</head>
+<body>
+    <header class="l-header">
+        <div class="l-inner__flex">
+            <h1 class="title pc"><a href="/">PAS-POL -旅のモノづくりブランド-｜TABIPPO</a></h1>
+            <p class="menu sp">MENU</p>
+            <div id="js-toggle-menu" class="hamburger__menu sp">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="js-global-menu" class="p-nav is__header global__menu">
+                <ul class="l-inner__flex">
+                    <li><a href="/">TOP</a></li>
+                    <li><a href="/">PRODUCT</a></li>
+                    <li><a href="/">ABOUT</a></li>
+                    <li><a href="/">NEWS</a></li>
+                    <li><a href="/">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>

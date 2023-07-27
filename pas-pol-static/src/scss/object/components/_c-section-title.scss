@@ -1,0 +1,27 @@
+@use "../../foundation/font" as f;
+@use "../../foundation/rem" as r;
+@use "../../foundation/mixin" as m;
+
+.c-section__title {
+    position: relative;
+    font-family: f.$font-en;
+    font-size: r.f-rem(30);
+    line-height: 1;
+    margin: 0;
+    &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 68px;
+        height: 8px;
+        background: url('../images/title-underline.png') no-repeat;
+        background-size: contain;
+        background-position: 0 bottom;
+        @include m.mq(sp_min) {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

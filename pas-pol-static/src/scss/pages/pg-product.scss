@@ -1,0 +1,56 @@
+@use "../foundation/color" as c;
+@use "../foundation/rem" as r;
+@use "../foundation/mixin" as m;
+
+.pg-product {
+    position: relative;
+    padding-top: 110px;
+    padding-bottom: 110px;
+    @include m.mq(sp_min) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        margin-bottom: 70px;
+    }
+    .title__wrap {
+        margin-bottom: 60px;
+        @include m.mq(sp_min) {
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .c-button {
+            @include m.mq(sp_min) {
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
+    .card__wrap {
+        margin: 0 4rem;
+        @include m.mq(sp) {
+            margin: 0;
+        }
+        .product__card {
+            width: 30%;
+            margin-bottom: 60px;
+            @include m.mq(sp_min) {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            @media (any-hover: hover) {
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+            .img {
+                width: 100%;
+            }
+            .title {
+                font-size: clamp(r.f-rem(18), 2vw, r.f-rem(20));
+                font-weight: bold;
+                text-align: left;
+                padding: 0 20px;
+                margin: 20px 0 0;
+            }
+        }
+    }
+}

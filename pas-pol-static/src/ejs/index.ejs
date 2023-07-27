@@ -1,0 +1,158 @@
+<%
+    page = 'top'
+    // path = '/'
+    path = '/standard/'
+%>
+<%-
+    include('./layout/_head', {
+        meta: pageData['top']
+    });
+%>
+<main>
+    <div class="pg-hero">
+        <div class="swiper hero-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="<%= path %>images/hero01.jpg"
+                        srcset="<%= path %>images/hero01.jpg, <%= path %>images/hero01-sp.jpg 869w" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="<%= path %>images/hero02.jpg"
+                        srcset="<%= path %>images/hero02.jpg, <%= path %>images/hero02-sp.jpg 869w" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="<%= path %>images/hero03.jpg"
+                        srcset="<%= path %>images/hero03.jpg, <%= path %>images/hero03-sp.jpg 869w" alt="">
+                </div>
+            </div>
+        </div>
+        <p class="icon-arrow"><img src="<%= path %>images/arrow.png" alt=""></p>
+        <p class="hero-logo sp"><img src="<%= path %>images/logo-square.png" alt=""></p>
+    </div>
+    <section class="pg-concept">
+        <div class="l-container sm">
+            <h2 class="concept__title">旅に出よう</h2>
+            <div class="text__wrap">
+                <p class="concept__text">
+                    僕たちが作りたいのは<br>
+                    持っているだけで旅に出たくなるモノ。<br>
+                    持っているだけでわくわくするモノ。
+                </p>
+                <p class="concept__text">
+                    それは新しい時代の "パスポート"<br>
+                    僕たちが作るものは、<br>
+                    そんな、存在でありたい。
+                </p>
+                <p class="concept__text">
+                    そして、人と人が繋がる<br>
+                    こんな時代だからこそ、<br>
+                    僕たちは、みんなでひとつのモノを<br>
+                    作ることを追求したい。
+                </p>
+                <p class="concept__text logo">
+                    <img src="<%= path %>images/concept-logo.png" alt="">
+                </p>
+                <p class="concept__text">
+                    それは、自分と世界を繋げる<br>
+                    旅のモノづくりブランド
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="pg-product l-container">
+        <div class="title__wrap l-inner__flex">
+            <h2 class="c-section__title">PRODUCT</h2>
+            <a href="/" class="c-button is__black">MORE</a>
+        </div>
+        <div class="card__wrap l-inner__flex align-start">
+            <a href="/" class="product__card">
+                <p class="img"><img src="<%= path %>images/product01.png" alt=""></p>
+                <h3 class="title">地球一周 365日 世界遺産絶景の旅</h3>
+            </a>
+            <a href="/" class="product__card">
+                <p class="img"><img src="<%= path %>images/product02.png" alt=""></p>
+                <h3 class="title">365日 京都 絶景の旅</h3>
+            </a>
+            <a href="/" class="product__card">
+                <p class="img"><img src="<%= path %>images/product03.png" alt=""></p>
+                <h3 class="title">365日 北海道 絶景日めくりカレンダー</h3>
+            </a>
+            <a href="/" class="product__card">
+                <p class="img"><img src="<%= path %>images/product04.png" alt=""></p>
+                <h3 class="title">365日 北海道 絶景の旅</h3>
+            </a>
+            <a href="/" class="product__card">
+                <p class="img"><img src="<%= path %>images/product05.png" alt=""></p>
+                <h3 class="title">The World Festival Guide -海外の音楽フェス完全ガイド-</h3>
+            </a>
+            <a href="/" class="product__card">
+                <p class="img"><img src="<%= path %>images/product06.png" alt=""></p>
+                <h3 class="title">この世界で死ぬまでにしたいこと2000</h3>
+            </a>
+        </div>
+    </section>
+    <section class="pg-news">
+        <div class="l-container">
+            <div class="title__wrap l-inner__flex">
+                <h2 class="c-section__title">NEWS</h2>
+                <a href="/" class="c-button is__black">MORE</a>
+            </div>
+            <div class="card__wrap l-inner__flex align-start">
+                <a href="/" class="news__card l-inner__flex align-start">
+                    <p class="img"><img src="<%= path %>images/news01.jpeg" alt=""></p>
+                    <div class="text__wrap">
+                        <h3 class="title">2023年度夏の絶景ポストカード制作スタート！夏景色の写真を大募集！</h3>
+                        <p class="date">2022.7.22</p>
+                        <p class="excerpt">こんにちは、TABIPPOの小井詰です。 東急ハンズやLOFTにて販売されている、旅好きな方とつくってきたPAS-POLの夏の絶景ポストカード２０２３夏制作をスタートしました。 2023年度も今年同様、四季に合わせて募集をしていきます。年間を通して募集をするので、彩り豊かな四季折々の写真のご応募をお待ちしております。今回は夏の風景写真を募集いたします！ 現在の予定では以下のスケジュールで募集を行い（変更の可能性あり）、夏以降募集の際にはまた、改めてお知らせをいたします。写真募集年 ...</p>
+                    </div>
+                </a>
+                <a href="/" class="news__card l-inner__flex align-start">
+                    <p class="img"><img src="<%= path %>images/news02.jpeg" alt=""></p>
+                    <div class="text__wrap">
+                        <h3 class="title">【2023年度も制作決定】人気の絶景ポストカード「春」の写真を大募集！</h3>
+                        <p class="date">2022.4.11</p>
+                        <p class="excerpt">こんにちは、TABIPPOの小井詰です。 東急ハンズやLOFTにて販売されている、旅好きな方とつくってきたPAS-POLの絶景ポストカードの春編、2023年度も制作が決まりました！ 2023年度も今年同様、四季に合わせて募集をしていきます。年間を通して募集をするので、彩り豊かな四季折々の写真のご応募をお待ちしております。まずは、春の風景写真を募集いたします！ 現在の予定では以下のスケジュールで募集を行い（変更の可能性あり）、春以降募集の際にはまた、改めてお知らせをいたします。写真 ...</p>
+                    </div>
+                </a>
+                <a href="/" class="news__card l-inner__flex align-start">
+                    <p class="img"><img src="<%= path %>images/news03.jpeg" alt=""></p>
+                    <div class="text__wrap">
+                        <h3 class="title">人気の絶景ポストカード制作中！「クリスマス」の絶景写真を大募集します</h3>
+                        <p class="date">2021.11.29</p>
+                        <p class="excerpt">こんにちは、TABIPPOの小井詰です。 東急ハンズやLOFTにて販売されている、旅好きな方とつくってきたPAS-POLの絶景ポストカードですが、2021年より制作が再開いたしました。 photo by PAS-POL 今回の制作は、四季に合わせて募集をしています。年間を通して募集をするので、彩り豊かな四季折々の写真のご応募をお待ちしております。第四弾は、クリスマスの風景写真を募集いたします！ 現在、春、夏と募集が終了し、秋の絶景写真の募集を延長しております！そして最後の募集となるのが、冬の絶景 ...</p>
+                    </div>
+                </a>
+                <a href="/" class="news__card l-inner__flex align-start">
+                    <p class="img"><img src="<%= path %>images/news04.jpeg" alt=""></p>
+                    <div class="text__wrap">
+                        <h3 class="title">【募集期間延長】人気の絶景ポストカード製作中！日本の「秋」の絶景を大募集します</h3>
+                        <p class="date">2021.10.12</p>
+                        <p class="excerpt">こんにちは、TABIPPOの中　美砂希です。 東急ハンズやLOFTにて販売されている、旅好きな方とつくってきたPAS-POLの絶景ポストカードですが、2021年より制作が再開いたしました。 photo by PAS-POL 今回の制作は、四季に合わせて募集をしています。年間を通して募集をするので、彩り豊かな四季折々の写真のご応募をお待ちしております。第三弾は、秋の風景写真を募集いたします！ 現在の予定では以下のスケジュールで募集を行い（変更の可能性あり）、秋以降募集の際にはまた、改めてお知らせを ..."</p>
+                    </div>
+                </a>
+                <a href="/" class="news__card l-inner__flex align-start">
+                    <p class="img"><img src="<%= path %>images/news05.jpeg" alt=""></p>
+                    <div class="text__wrap">
+                        <h3 class="title">【セール情報あり】PAS-POLオンラインショップ閉店のお知らせ</h3>
+                        <p class="date">2021.9.15</p>
+                        <p class="excerpt">いつも、PAS-POLのサイトをご覧いただきありがとうございます。突然ではございますが、この度2021年9月30日をもちまして、PAS-POL公式オンラインショップを閉鎖する運びとなりました。（※PAS-POLのブランドがなくなるわけではありません）   2015年の夏からスタートしたオンラインショップですが、旅が好きな方、TABIPPOを知ってくださってる方、ライフスタイルにこだわりたい方、などたくさんの方にPAS-POLの商品を公式ショップにて購入いただいたこと、と ...</p>
+                    </div>
+                </a>
+                <a href="/" class="news__card l-inner__flex align-start">
+                    <p class="img"><img src="<%= path %>images/news06.jpeg" alt=""></p>
+                    <div class="text__wrap">
+                        <h3 class="title">【募集期間延長】人気の絶景ポストカード製作中！日本の「夏」の絶景を大募集します</h3>
+                        <p class="date">2021.7.15</p>
+                        <p class="excerpt">こんにちは、TABIPPOの中美砂希です。 東急ハンズやLOFTにて販売されている、旅好きな方とつくってきたPAS-POLの絶景ポストカードですが、制作が再開しましたのでお知らせいたします。 photo by PAS-POL 今回の制作は、四季に合わせて募集をしています。年間を通して募集をするので、彩り豊かな四季折々の写真のご応募をお待ちしております。第二弾は、夏の風景写真を募集いたします！ 現在の予定では以下のスケジュールで募集を行い（変更の可能性あり）、夏以降募集の際にはまた、改めてお知ら ...</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+<%-
+    include('./layout/_footer', {
+        meta: pageData['top']
+    });
+%>

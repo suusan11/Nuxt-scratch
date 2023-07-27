@@ -1,0 +1,101 @@
+<script setup lang="ts">
+    type Props = {
+        text: string,
+        color_type?: string,
+        url: string,
+    }
+    const { text, color_type, url } = defineProps<Props>();
+</script>
+<template>
+    <NuxtLink class="c-button" :class="color_type" :to="url">
+        <span>{{ text }}</span>
+    </NuxtLink>
+</template>
+
+<style lang="scss" scoped>
+@use "../assets/scss/foundation/color" as c;
+@use "../assets/scss/foundation/rem" as r;
+@use "../assets/scss/foundation/font" as f;
+@use "../assets/scss/foundation/mixin" as m;
+    .c-button {
+        display: grid;
+        place-content: center;
+        width: 162px;
+        height: 46px;
+        border: 1px solid c.$black;
+        background-color: c.$white;
+        color: c.$black;
+        font-family: f.$font-en;
+        font-size: r.f-rem(12);
+        letter-spacing: 0.1em;
+        transition: background-color 0.2s ease-out;
+        &.is__black {
+            position: relative;
+            &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top: calc(50% - 2px);
+                right: 20px;
+                width: 8px;
+                height: 8px;
+                border-top: 1px solid c.$black;
+                border-right: 1px solid c.$black;
+                transform: rotate(45deg) translateY(-50%);
+            }
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: c.$black;
+                    color: c.$white;
+                    &::after {
+                        border-color: c.$white;
+                    }
+                }
+            }
+        }
+        &.is__facebook {
+            border-color: #4871a9;
+            color: #4871a9;
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: #4871a9;
+                    color: c.$white;
+                }
+            }
+        }
+        &.is__twitter {
+            border-color: #70bdd3;
+            color: #70bdd3;
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: #70bdd3;
+                    color: c.$white;
+                }
+            }
+        }
+        &.is__hatena {
+            border-color: #2f9bcd;
+            color: #2f9bcd;
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: #2f9bcd;
+                    color: c.$white;
+                }
+            }
+        }
+        &.is__line {
+            display: none;
+            border-color: #8ec09d;
+            color: #8ec09d;
+            @include m.mq(sp_min) {
+                display: grid;
+            }
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: #8ec09d;
+                    color: c.$white;
+                }
+            }
+        }
+    }
+</style>
